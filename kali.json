@@ -1,0 +1,27 @@
+{
+  "variables": {
+    "aws_access_key": "YOUR-ACCESS-KEY-HERE",
+    "aws_secret_key": "YOUR-SECRET-KEY-HERE"
+  },
+
+  "builders": [{
+  "access_key": "{{user `aws_access_key`}}",
+  "secret_key": "{{user `aws_secret_key`}}",
+  "type": "amazon-ebs",
+  "region": "us-east-1",
+  "source_ami": "ami-42fa462a",
+  "instance_type": "m1.small",
+  "ssh_username": "admin",
+  "ami_name": "kali-1.1-full {{timestamp}}"
+  }],
+  
+  "provisioners": [{
+      "type": "shell",
+      "pause_before": "10s",
+      "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'",
+      "scripts": [
+        "scripts/base.sh",
+	"scripts/vagrant.sh"
+      ]
+    }]
+}
