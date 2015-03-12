@@ -21,3 +21,5 @@ Add your AWS Acess_Key/Secret_Key to the kali.json template here:
 Run packer to create the AMI: `packer build kali.json`
 
 You now have a fully updated Kali 1.1 AMI available in your AWS EC2 account.
+
+You can launch a Kali/Target training environment with the provided CloudFormation template by changing `"ImageId": "ami-30062058"` to whatever the AMI is of the Kali machine you created above.
