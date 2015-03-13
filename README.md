@@ -8,7 +8,7 @@ A Packer template to build a Kali 1.1 EC2 instance
 * AWS account
 
 ## About the AMI
-First we start with the official Offensive Security [https://www.kali.org/news/kali-linux-amazon-ec2-ami/](Kali AMI) (ami-42fa462a) then we update it to Kali 1.1.
+First we start with the official Offensive Security Kali AMI [ami-42fa462a](https://www.kali.org/news/kali-linux-amazon-ec2-ami/) then we update it to Kali 1.1.
 
 ## How to use
 Add your AWS Acess_Key/Secret_Key to the kali.json template here:
